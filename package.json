@@ -7,6 +7,7 @@
     "enzyme-adapter-react-16": "^1.6.0",
     "enzyme-to-json": "^3.3.4",
     "fetch-mock": "^7.0.7",
+    "node-sass": "^4.9.3",
     "react-scripts": "2.0.4"
   },
   "dependencies": {

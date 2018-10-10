@@ -1,0 +1,16 @@
+
+.station {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  &::before {
+    border: 0.5em solid #000;
+    border-radius: 50%;
+    content: '';
+    display: block;
+    height: 50px;
+    width: 50px;
+  }
+}
