@@ -3,6 +3,10 @@
   "version": "0.0.1",
   "private": true,
   "devDependencies": {
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.6.0",
+    "enzyme-to-json": "^3.3.4",
+    "fetch-mock": "^7.0.7",
     "react-scripts": "2.0.4"
   },
   "dependencies": {
@@ -12,7 +16,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --verbose",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
