@@ -16,7 +16,6 @@ describe('Station', () => {
   })
 
   it('has a station name', () => {
-
     expect(wrapper.text()).toBe(stationName)
   })
 
