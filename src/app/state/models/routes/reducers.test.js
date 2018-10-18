@@ -45,10 +45,40 @@ describe('routesReducer', () => {
       currentRoute: ['Paddington'],
     }
 
-    const action = {type: types.REMOVE_STATION}
+    const action = {type: types.REMOVE_LAST_STATION}
     const result = routesReducer(startState, action)
 
     expect(result).toEqual(expectedState)
+  })
+
+  it('remove station by index', () => {
+    const startState = {
+      isFetching: false,
+      routes: [],
+      currentRoute: ['Paddington', 'Kings Cross St Pancras', 'Euston'],
+    }
+
+    const expectedState1 = {
+      isFetching: false,
+      routes: [],
+      currentRoute: ['Paddington', 'Euston'],
+    }
+
+    const action = {type: types.REMOVE_STATION, payload: 1}
+    const result = routesReducer(startState, action)
+    expect(result).toEqual(expectedState1)
+
+
+    const expectedState2 = {
+      isFetching: false,
+      routes: [],
+      currentRoute: ['Kings Cross St Pancras', 'Euston'],
+    }
+
+    const action2 = {type: types.REMOVE_STATION, payload: 0}
+    const result2 = routesReducer(startState, action2)
+    expect(result2).toEqual(expectedState2)
+
   })
 
 })

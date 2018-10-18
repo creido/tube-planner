@@ -7,7 +7,8 @@ describe('store', () => {
     const expected = {
       routes: {
         isFetching: false,
-          routes: []
+        routes: [],
+        currentRoute: [],
       }
     }
 
