@@ -13,7 +13,6 @@ const App = () =>
     <Station name="Marylebone" />
     <Station name="Paddington" />
     <Station name="Euston" />
-    <Station name="Euston" />
   </div>
 
 
