@@ -32,4 +32,23 @@ describe('routesReducer', () => {
     expect(result).toEqual(expectedState)
   })
 
+  it('remove the last station', () => {
+    const startState = {
+      isFetching: false,
+      routes: [],
+      currentRoute: ['Paddington', 'Kings Cross St Pancras'],
+    }
+
+    const expectedState = {
+      isFetching: false,
+      routes: [],
+      currentRoute: ['Paddington'],
+    }
+
+    const action = {type: types.REMOVE_STATION}
+    const result = routesReducer(startState, action)
+
+    expect(result).toEqual(expectedState)
+  })
+
 })
