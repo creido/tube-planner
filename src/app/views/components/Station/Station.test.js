@@ -1,7 +1,7 @@
 import React from 'react'
 import {shallow} from 'enzyme'
 
-import Station from './Station'
+import {Station} from './Station'
 
 describe('Station', () => {
   let wrapper
