@@ -1,5 +1,6 @@
 import routesReducer from './reducers'
 import types from './types'
+import actions from './actions'
 
 const INITIAL_STATE = {
   isFetching: false,
@@ -26,7 +27,7 @@ describe('routesReducer', () => {
       currentRoute: ['Euston'],
     }
 
-    const action = {type: types.ADD_STATION, payload: 'Euston'}
+    const action = actions.addStation('Euston')
     const result = routesReducer(startState, action)
 
     expect(result).toEqual(expectedState)
@@ -45,7 +46,7 @@ describe('routesReducer', () => {
       currentRoute: ['Paddington'],
     }
 
-    const action = {type: types.REMOVE_LAST_STATION}
+    const action = actions.removeLastStation()
     const result = routesReducer(startState, action)
 
     expect(result).toEqual(expectedState)
@@ -64,7 +65,7 @@ describe('routesReducer', () => {
       currentRoute: ['Paddington', 'Euston'],
     }
 
-    const action = {type: types.REMOVE_STATION, payload: 1}
+    const action = actions.removeStation(1)
     const result = routesReducer(startState, action)
     expect(result).toEqual(expectedState1)
 
@@ -75,7 +76,7 @@ describe('routesReducer', () => {
       currentRoute: ['Kings Cross St Pancras', 'Euston'],
     }
 
-    const action2 = {type: types.REMOVE_STATION, payload: 0}
+    const action2 = actions.removeStation(0)
     const result2 = routesReducer(startState, action2)
     expect(result2).toEqual(expectedState2)
 
